@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #060607;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/login.jpg);
+}
+
+.inicio {
+    background: rgb(7, 6, 6);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+.pantalla {
+    background: #EFB810;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    text-align: center;
+}
+
+.buttons {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: #EFB810;
+    color: rgb(8, 8, 8);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #EFB810;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.pin-pad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.pin-pad button {
+    background: #444;
+}
+
+.pin-pad button:hover {
+    background: #333;
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.oculto {
+    display: none;
+}
+
+.error {
+    color: red;
+    margin: 0.5rem 0;
+}
+
+.success {
+    color: green;
+    margin: 0.5rem 0;
+}

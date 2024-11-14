@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cajero Automático</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="inicio">
+        <div class="pantalla" id="pantalla">
+            Bienvenido al Cajero Automático
+        </div>
+
+        <!-- Login Section -->
+        <div id="login">
+            <input type="text" id="tarjeta" placeholder="Número de Tarjeta" maxlength="16">
+            <input type="password" id="pin" placeholder="PIN" maxlength="4">
+            <button onclick="login()">Ingresar</button>
+        </div>
+
+        <!-- Main Menu Section -->
+        <div id="menu" class="oculto">
+            <div class="buttons">
+                <button onclick="showBalance()">Ver Saldo</button>
+                <button onclick="showWithdraw()">Retirar</button>
+                <button onclick="showTransfer()">Transferir</button>
+            </div>
+            <button onclick="logout()" style="width: 100%; margin-top: 1rem;">Salir</button>
+        </div>
+
+        <!-- Withdraw Section -->
+        <div id="retirodefondos" class="oculto">
+            <input type="number" id="aretirar" placeholder="Monto a retirar">
+            <button onclick="withdraw()">Confirmar Retiro</button>
+            <button onclick="showMenu()">Volver</button>
+        </div>
+
+        <!-- Transfer Section -->
+        <div id="secciontransferencia" class="oculto">
+            <input type="text" id="destinatario" placeholder="Cuenta destino">
+            <input type="number" id="transferir" placeholder="Monto a transferir">
+            <select id="fondo">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+            </select>
+            <button onclick="transfer()">Confirmar Transferencia</button>
+            <button onclick="showMenu()">Volver</button>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
